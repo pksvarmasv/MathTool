@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MathTool</title>
+</head>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#main-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.column-left {
+    display: grid;
+    overflow: auto;
+    grid-template-rows: 10% 1fr 10%;
+}
+
+.links_region {
+    padding-left: 10px;
+    padding-top: 10px;
+    overflow: auto;
+}
+
+.column-right {
+    display: grid;
+    grid-template-rows: 1fr 10%;
+    overflow: auto;
+}
+
+.worksheet_region {
+    padding-left: 10px;
+    overflow: auto;
+}
+
+.answer_region {
+    padding-left: 10px;
+}
+
+.filler_region {
+    background-color: black;
+}
+
+.header_region {
+    background-color: black;
+	color: white;
+}
+
+.help_region {
+    background-color: white /*#AED6F1*/;
+	padding-left: 10px;
+}
+
+.steps_region {
+    background-color: white/*#AED6F1*/; 
+	padding-left: 10px;
+    overflow: auto;
+}
+
+.copyright {
+    background-color: black;
+    color: white;
+	padding-top: 10px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 80%;
+    height: 20%;
+}
+
+th, td {
+    background-color: black;
+    color: white;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+table caption {
+    padding: 10px;
+    background: #FFEA00; /* yellow;*/
+    font-weight: bold;
+}
+</style>
+<body onkeydown="tblKeyDown(event)">
+    <div id="main-container">
+        <div class="column-left">
+            <div class="header_region">
+                <header>
+                    <h1 style="text-align:center">Divide Two Numbers
+                </header>
+            </div>
+            <div class="links_region">
+               <li><a href="https://pksvarmasv.github.io/SimpleAddition/">Simple Addition</a></li>
+               <li><a href="https://pksvarmasv.github.io/Subtraction/">Subtraction</a></li>
+               <li><a href="https://pksvarmasv.github.io/Multiplication/">Multiplication</a></li>
+               <li><a href="https://pksvarmasv.github.io/Division/">Division</a></li>
+               <li><a href="https://pksvarmasv.github.io/SyntheticDvision/">Synthetic Division</a></li>
+            </div>
+
+            <div class="filler_region">
+            </div>
+
+        </div>
+        <div class="column-right">
+            <div class="help_region">
+                <h2 style="background-color:#FFEA00">About This Tool</h2>
+                <p id="helpInfo">
+This tool is to help visually impaired students/individuals learn mathematic concepts. <br> <br>
+
+<b>Who is the target audience?</b><br>
+<p>Students who can speak English, and who use screen readers. The tool might also be useful for teachers/parents of those students.
+The tool may also be used to teach very young children the basics of mathematics.</p><br>
+
+<p>The tool is focussed on topics that can be displayed as a table that a screen-reader, like JAWS, NVDA and Windows Narrator, can read. 
+Topics that will be covered include simple addition, subtraction, multiplication and division. 
+Also included will be topics that will be useful for high-school students, like synthetic division of first and second order, polynomial division, matrices, decimal to binary conversion and viceversa, ....</p><br>
+
+<p>The tool will have buttons like "Solve", "Step-By-Step", "Exercise" and "Verify". "Solve" will just solve the problem. "Step-By-Step" will explain the steps as it is being solved. "Exercise" is for the student to try on their own and "Verify" is to check their work.
+There is also a "About" section that gives a brief description of the topic, and "Steps" section that shows the steps as the problem is being solved.
+The final result will appear under "Answer". </p><br>  
+  
+If you want to start over a topic, press F5 to refresh the screen.  
+  
+
+                    </b>
+                </p>
+            </div>
+			            <div class="copyright">
+                <p id="copyrightStr">
+                    Copyright &copy; 2022 JANBAV. All rights reserved.<br>
+                    Email: contact@janbav.org
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
