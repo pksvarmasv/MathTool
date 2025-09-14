@@ -1,2 +1,3 @@
 # MathTool
 Math tool for Visually impaired
+This tool is to help visually impaired students/individuals learn mathematic concepts like addition, multiplication, ....
